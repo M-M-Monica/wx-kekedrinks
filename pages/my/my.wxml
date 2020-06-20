@@ -1,0 +1,62 @@
+<view class="my-list">
+  <image src="/images/bg.jpg" class="bg"></image>
+  <open-data type="userAvatarUrl" class="avatar"/>
+  <view class="info-list">
+    <view class="info">
+      <view class="title">
+        <image src="/images/address.png" />
+        <span>我的信息</span>
+        <button size="mini" bindtap="changeMyInfo" wx:if="{{myInfo}}">修改</button>
+        <button size="mini" bindtap="showMyInfo">{{myInfo===true?'收起':'查看'}}</button>
+      </view>
+      <view class="info-user" wx:if="{{myInfo}}">
+        <input value="用户：{{user.name}}" disabled="true" />
+        <input value="手机：{{user.tel}}" disabled="true" />
+        <input value="地址：{{user.address}}" disabled="true" />
+      </view>
+      <mask-comp wx:if="{{infoChange}}" user="{{user}}" bind:changeUser="getChangeUser" />
+    </view>
+    <view class="info">
+      <view class="title">
+        <image src="/images/order.png" />
+        <span>我的订单</span>
+        <button size="mini" bindtap="showMyOrder">查看</button>
+      </view>
+      <view class="info-order">
+        <ul wx:if="{{myOrder}}">
+          <li class="order-detail" wx:for="{{order}}" wx:key="id">
+            <view>
+              <span>订单号：{{item.id}}</span>
+              <button
+                size="mini"
+                bindtap="goToPay"
+                data-id="{{item.id}}"
+                wx:if="{{item.status===1}}"
+                class="{{item.statusClass}}"
+              >
+                去支付
+              </button>
+              <button size="mini" class="{{item.statusClass}}" disabled="true">
+                {{item.statusInfo}}
+              </button>
+            </view>
+            <view>
+              <span>合计￥：{{item.total}}</span>
+              <span>{{item.createdAt}}</span>
+            </view>
+            <view class="info-detail">
+              <ul>
+                <li class="product-detail" wx:for="{{item.Products}}" wx:key="id">
+                  <image src='{{item.img}}' /> 
+                  <span>{{item.name}}</span>
+                  <span>num:{{item.OrderList.count}}</span>
+                  <span>￥:{{item.price*item.OrderList.count}}</span>
+                </li>
+              </ul>
+            </view>
+          </li>
+        </ul>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="info-change" wx:if="{{infoChange}}">
+  <form catchsubmit="formSubmit">
+    <view class="page-section">
+      <view class="page-cell">
+        <input name="name" value="{{user.name}}" placeholder="用户名" />
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-cell">
+        <input name="tel" value="{{user.tel}}" placeholder="联络电话" />
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-cell">
+        <input name="address" value="{{user.address}}" placeholder="收货地址" />
+      </view>
+    </view>
+    <view class="btn-area">
+      <button type="primary" formType="submit">Submit</button>
+    </view>
+  </form>
+</view>

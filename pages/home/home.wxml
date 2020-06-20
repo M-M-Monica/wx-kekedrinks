@@ -1,0 +1,19 @@
+<view>
+  <view class="header">
+    <view id="drinks" bindtap="getFoodList">DRINKS</view>
+    <view id="dessert" bindtap="getFoodList">DESSERT</view>
+  </view>
+  <ul class="food-list">
+    <li class="food-block" wx:for="{{food}}" wx:key="id">
+      <!-- <navigator class="list" url="/pages/detail/detail?id={{item.id}}"> -->
+        <image src="{{item.img}}" />
+        <view class="detail">
+          <p>{{item.name}}</p>
+          <p>￥:{{item.price}}</p>
+        </view>
+        <image src="/images/add.png" id="add" bindtap="addToCart" data-id="{{item.id}}"/>
+      <!-- </navigator> -->
+    </li>
+  </ul>
+  <view class="ball" wx:if="{{ball}}" style="left:{{ball_x}};top:{{ball_y}}">+1</view>
+</view>

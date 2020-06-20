@@ -1,0 +1,83 @@
+#cart-list{
+  width: 100%;
+  padding: 26rpx;
+  box-sizing: border-box;
+  margin-bottom: 140rpx;
+}
+#cart-list ul{
+  list-style: none;
+}
+.good-list{
+  height: 180rpx;
+  padding: 0 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  border: 2rpx solid #e0e0e0;
+  box-shadow: 0 0 50rpx 10rpx #fdf4e2;
+  margin-bottom: 16rpx;
+}
+.good-list checkbox{
+  flex: 0 0 10%;
+}
+.good-list .product{
+  flex: 0 0 15%;
+}
+.good-list .product image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.good-list .detail{
+  flex: 1;
+}
+.good-list .count{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 0 0 14%;
+}
+.good-list .count image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.good-list .count span{
+  margin: 0 8rpx;
+  color: #ff0000;
+}
+.good-list .delete{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 10%;
+}
+.good-list .delete image{
+  width: 50rpx;
+  height: 50rpx;
+}
+#sum{
+  width: 100%;
+  height: 140rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-top: 2rpx solid #e0e0e0;
+  font-size: 36rpx;
+  line-height: 140rpx;
+  color: red;
+}
+#sum p{
+  position: relative;
+  left: 15%;
+  line-height: 100rpx;
+}
+#sum button{
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  margin-top: -30rpx;
+}

@@ -1,0 +1,80 @@
+#order-list{
+  width: 100%;
+  padding: 26rpx;
+  box-sizing: border-box;
+}
+#order-list .info-order{
+  height: 100rpx;
+  padding: 10rpx;
+  box-shadow: 2rpx 2rpx 10rpx 2rpx #e0e0e0;
+}
+.info-order .status{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.info-order .status button{
+  float: right;
+  color: #fa541c;
+  background-color: #fff2e8;
+}
+.info-order .total{
+  float: right;
+}
+#order-list .info-user{
+  height: 100rpx;
+  padding: 10rpx;
+  margin-top: 24rpx;
+  box-shadow: 2rpx 2rpx 10rpx 2rpx #e0e0e0;
+}
+#order-list .info-user .info-detail button{
+  width: 148rpx;
+  float: right;
+}
+#order-list .info-user .info-detail{
+  height: 60rpx;
+  line-height: 60rpx
+}
+#order-list .info-user .info-detail span:first-child{
+  margin-right: 20rpx;
+}
+#order-list .info-user input,button{
+  flex: 1;
+}
+.order-detail{
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+  margin-top: 24rpx;
+  box-shadow: 2rpx 2rpx 10rpx 2rpx #e0e0e0;
+}
+.order-detail li{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10rpx;
+  margin-top: 20rpx;
+  border-bottom: 2rpx solid #e0e0e0;
+}
+.order-detail li image{
+  height: 100rpx;
+  flex: 0 0 15%;
+}
+.order-detail li span{
+  flex: 1;
+}
+.order-detail li span:first-of-type{
+  flex: 0 0 40%;
+}
+#pay{
+  height: 80rpx;
+  position: relative;
+  padding: 0 40rpx;
+}
+#pay button{
+  position: relative;
+  left: 45%;
+  top: 25%;
+  margin-right: 20rpx;
+}

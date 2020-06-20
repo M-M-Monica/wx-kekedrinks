@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/pay/pay"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "KEKEDrinks",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default",
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "color": "#c7c7c7",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "selectedIconPath": "/images/tab/home-active.png",
+        "iconPath": "/images/tab/home.png",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "selectedIconPath": "/images/tab/cart-active.png",
+        "iconPath": "/images/tab/cart.png",
+        "text": "Cart"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "selectedIconPath": "/images/tab/my-active.png",
+        "iconPath": "/images/tab/my.png",
+        "text": "My"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

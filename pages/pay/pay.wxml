@@ -1,0 +1,35 @@
+<view id="order-list">
+  <view class="info-order">
+    <view class="status">
+      <span>订单号：{{order.id}}</span>
+      <button size="mini" disabled="true">{{order.status > 1 ? '已支付' : '未支付'}}</button>
+    </view>
+    <view>
+      <span>合计￥：{{order.total}}</span>
+      <span class="total">{{order.createdAt}}</span>
+    </view>
+  </view>
+  <view class="info-user">
+    <view class="info-detail">
+      <span>用户:{{user.name}}</span>
+      <span>手机:{{user.tel}}</span>
+      <button size="mini" bindtap="changeInfo">修改</button>
+    </view>
+    <p>地址:{{user.address}}</p>
+  </view>
+  <mask-comp wx:if="{{infoChange}}" user="{{user}}" bind:changeUser="getChangeUser" />
+  <view class="order-detail">
+    <ul>
+      <li wx:for="{{cart}}" wx:key="id">
+        <image src='{{item.img}}' /> 
+        <span>{{item.name}}</span>
+        <span>数量：{{item.CartList.count}}</span>
+        <span>￥：{{item.price*item.CartList.count}}</span>
+      </li>
+    </ul>
+  </view>
+  <view id="pay">
+    <button type="warn" size="mini" bindtap="cancelOrder">取消订单</button>
+    <button type="warn" size="mini" bindtap="goToPay">提交订单</button>
+  </view>
+</view>

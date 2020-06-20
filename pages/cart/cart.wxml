@@ -1,0 +1,28 @@
+<view id="cart-list">
+  <ul>
+    <li class="good-list" wx:for="{{cart}}" wx:key="id">
+      <checkbox checked="{{item.CartList.status}}" bindtap="checkboxChange" data-id="{{item.id}}"/>
+      <view class="product">
+        <image src='{{item.img}}' />      
+      </view>
+      <view class="detail">
+        <span>{{item.name}}</span>
+      </view>
+      <view class="count">
+        <image src="/images/de.png" bindtap="decrease" data-id="{{item.id}}" data-count="{{item.CartList.count}}"/>
+        <span>{{item.CartList.count}}</span>
+        <image src="/images/in.png" bindtap="increase" data-id="{{item.id}}"/>
+      </view>
+      <view class="count">
+        <span>￥:{{item.price*item.CartList.count}}</span>
+      </view>
+      <view class="delete" bindtap="deleteGood" data-id="{{item.id}}">
+        <image src="/images/trash.png" />      
+      </view>
+    </li>
+  </ul>
+  <view id="sum">
+    <span>合计￥:{{total}}</span>
+    <button type="warn" size="mini" bindtap="goToPay" wx:if="{{total>0}}">结算</button>
+  </view>
+</view>

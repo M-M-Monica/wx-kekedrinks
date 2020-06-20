@@ -1,0 +1,23 @@
+.info-change{
+  width: 93%;
+  height: 96%;
+  position: fixed;
+  background-color: white;
+  z-index: 1000;
+  top: 2%;
+  padding: 100rpx 46rpx;
+  box-shadow: 2rpx 2rpx 10rpx 2rpx #e0e0e0;
+  box-sizing: border-box;
+}
+.info-change form .page-section{
+  height: 100rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+  box-shadow: 2rpx 2rpx 10rpx 2rpx #e0e0e0;
+  font-size: 40rpx;  
+}
+.info-change form .page-section .page-cell{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

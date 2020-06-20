@@ -1,0 +1,112 @@
+.my-list{
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+}
+.my-list .bg{
+  width: 100%;
+  height: 430rpx;
+  position: absolute;
+}
+.my-list .avatar{
+  width: 120rpx;
+  height: 120rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  top: 240rpx;
+  left: 50%;
+  margin-left: -60rpx;
+}
+.my-list .info-list{
+  width: 100%;
+  position: absolute;
+  top: 430rpx;
+  box-sizing: border-box;
+}
+.my-list .info{
+  padding: 0 30rpx;
+}
+.my-list .info .title{
+  position: relative;
+  border: 2rpx solid gray;
+  margin: 10rpx 0;
+  padding-left: 30rpx;
+}
+.my-list .info .title image{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -35rpx;
+}
+.my-list .info .title span{
+  line-height: 100rpx;
+  margin-left: 100rpx;
+}
+.my-list .info .title button{
+  line-height: 100rpx;
+  float: right;
+}
+.my-list .info-user input{
+  height: 80rpx;
+  padding: 20rpx 100rpx 0 30rpx;
+  box-shadow: inset 0 2rpx 2rpx 2rpx #e0e0e0;
+  box-sizing: border-box;
+}
+.my-list .info-order{
+  width: 90%;
+  position: absolute;
+  border: 2rpx solid #e0e0e0;
+}
+.my-list .info-order li{
+  padding: 0 30rpx;
+  margin-bottom: 10rpx;
+}
+.my-list .info-order li view{
+  margin: 0 30rpx;
+}
+.info-order .order-detail button,span:last-child{
+  float: right;
+}
+.info-order .order-detail .button-no{
+  color: #fa541c;
+  background: #fff2e8;
+  border: 2rpx solid #ffbb96;
+}
+.info-order .order-detail .button-success{
+  color: #2f54eb;
+  background: #f0f5ff;
+  border: 2rpx solid #adc6ff;
+}
+.info-order .order-detail .button-finish{
+  color: #52c41a;
+  background: #f6ffed;
+  border-color: #b7eb8f;
+}
+.info-order .order-detail view:first-of-type{
+  height: 64rpx;
+  line-height: 64rpx;
+}
+.info-order .product-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2rpx solid #e0e0e0;
+}
+.info-order .product-detail .product{
+  flex: 0 0 20%;
+}
+.info-order .product-detail image{
+  width: 100rpx;
+  height: 100rpx;
+  flex: 0 0 15%;
+}
+.info-order .product-detail span{
+  flex: 0 0 15%;
+}
+.info-order .product-detail span:first-of-type{
+  flex: 1;
+}
