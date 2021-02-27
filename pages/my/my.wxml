@@ -10,11 +10,16 @@
         <button size="mini" bindtap="showMyInfo">{{myInfo===true?'收起':'查看'}}</button>
       </view>
       <view class="info-user" wx:if="{{myInfo}}">
-        <input value="用户：{{user.name}}" disabled="true" />
-        <input value="手机：{{user.tel}}" disabled="true" />
-        <input value="地址：{{user.address}}" disabled="true" />
+        <input value="用户：{{user.name?user.name:'无'}}" disabled="true" />
+        <input value="手机：{{user.tel?user.tel:'无'}}" disabled="true" />
+        <input value="地址：{{user.address?user.address:'无'}}" disabled="true" />
       </view>
-      <mask-comp wx:if="{{infoChange}}" user="{{user}}" bind:changeUser="getChangeUser" />
+      <mask-comp
+        wx:if="{{infoChange}}"
+        user="{{user}}"
+        bind:changeUser="getChangeUser"
+        bind:closeMask="getMaskStatus"
+      />
     </view>
     <view class="info">
       <view class="title">

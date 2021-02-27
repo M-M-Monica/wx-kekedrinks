@@ -21,3 +21,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
+.btn-area>button{
+  margin-bottom: 10px;
+}

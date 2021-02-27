@@ -11,7 +11,7 @@ Page({
   },
   onLoad(){
     ms.request({
-      url: '/product/list/drinks/1'
+      url: '/product/list/drinks/num=1&size=8'
     }).then(res => {
       let food = res.data.rows
       food.forEach((item)=>{
@@ -26,8 +26,9 @@ Page({
   },
   getFoodList(e){
     let category = e.target.id
+    let i = 1//第一页
     ms.request({
-      url: `/product/list/${category}/1`
+      url: `/product/list/${category}/num=${i}&size=8`
     }).then(res => {
       let food = res.data.rows
       food.forEach((item)=>{

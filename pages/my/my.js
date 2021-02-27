@@ -6,9 +6,9 @@ Page({
   data: {
     user: {},
     order: [],
-    myInfo: false,
-    myOrder: false,
-    infoChange: false
+    myInfo: false,//我的信息
+    myOrder: false,//我的订单
+    infoChange: false//修改弹层
   },
   onLoad(){
     ms.request({
@@ -22,6 +22,11 @@ Page({
   getChangeUser(e){
     this.setData({
       user: e.detail
+    })
+  },
+  getMaskStatus(e){
+    this.setData({
+      infoChange: e.detail
     })
   },
   showMyInfo(){

@@ -10,13 +10,19 @@
         <input name="tel" value="{{user.tel}}" placeholder="联络电话" />
       </view>
     </view>
+    <!-- <view class="page-section">
+      <view class="page-cell">
+        <input name="password" value="{{user.password}}" placeholder="账号密码(非必填)" />
+      </view>
+    </view> -->
     <view class="page-section">
       <view class="page-cell">
         <input name="address" value="{{user.address}}" placeholder="收货地址" />
       </view>
     </view>
     <view class="btn-area">
-      <button type="primary" formType="submit">Submit</button>
+      <button type="primary" formType="submit">提交</button>
+      <button type="primary" bindtap="closeMask">取消</button>
     </view>
   </form>
 </view>

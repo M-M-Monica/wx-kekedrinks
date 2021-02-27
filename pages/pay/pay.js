@@ -15,7 +15,7 @@ Page({
     let goodsObj = {}
     let goodsArr = []
     cart.forEach((item)=>{
-      item.img = config.baseUrl + item.img
+      //item.img = config.baseUrl + item.img
       goodsObj = { id: item.id, count: item.CartList.count }
       goodsArr.push(goodsObj)
     })

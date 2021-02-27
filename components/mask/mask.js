@@ -13,6 +13,12 @@ Component({
     this._initValidate()
   },
   methods: {
+    closeMask(){//关闭弹层
+      this.setData({
+        infoChange: false
+      })
+      this.triggerEvent('closeMask', false)
+    },
     formSubmit(e) {
       let userInfo = e.detail.value
       if (!this.WxValidate.checkForm(userInfo)) {
@@ -20,9 +26,6 @@ Component({
         this._showModal(error)
         return false
       }
-      this._showModal({
-        msg: '提交成功'
-      })
       ms.request({
         url: '/user/update',
         method: 'post',
@@ -32,6 +35,9 @@ Component({
       }).then(res => {
         if(res.data.error_code === 0){
           this.triggerEvent('changeUser', userInfo)
+          this._showModal({
+            msg: '提交成功'
+          })
           this.setData({
             infoChange: false,
             user: userInfo
