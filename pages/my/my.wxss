@@ -45,7 +45,7 @@
   margin-left: 100rpx;
 }
 .my-list .info .title button{
-  line-height: 100rpx;
+  line-height: 98rpx;
   float: right;
 }
 .my-list .info-user input{
@@ -89,6 +89,7 @@
   line-height: 64rpx;
 }
 .info-order .product-detail{
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;

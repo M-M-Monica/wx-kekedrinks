@@ -35,11 +35,17 @@ Page({
     })
   },
   showMyOrder(){
-    ms.request({
-      url: '/order/list'
-    }).then(res => {
-      this._changeOrderClass(res.data)
-    })
+    if(this.data.myOrder == false){
+      ms.request({
+        url: '/order/list'
+      }).then(res => {
+        this._changeOrderClass(res.data)
+      })      
+    }else{
+      this.setData({
+        myOrder: false
+      })
+    }
   },
   changeMyInfo(){
     this.setData({

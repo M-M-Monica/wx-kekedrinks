@@ -74,7 +74,7 @@
 }
 #pay button{
   position: relative;
-  left: 45%;
+  left: 38%;
   top: 25%;
   margin-right: 20rpx;
 }

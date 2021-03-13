@@ -25,7 +25,7 @@
       <view class="title">
         <image src="/images/order.png" />
         <span>我的订单</span>
-        <button size="mini" bindtap="showMyOrder">查看</button>
+        <button size="mini" bindtap="showMyOrder">{{myOrder===true?'收起':'查看'}}</button>
       </view>
       <view class="info-order">
         <ul wx:if="{{myOrder}}">
